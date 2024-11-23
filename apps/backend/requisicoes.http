@@ -1,1 +1,8 @@
 GET http://localhost:4000/ping
+
+###
+GET http://localhost:4000/eventos/evento-fullstack
+
+###
+
+GET http://localhost:4000/eventos/6ced1457-313b-4b33-a35a-f5887f784f08
