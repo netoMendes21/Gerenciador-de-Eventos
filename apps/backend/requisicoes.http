@@ -2,7 +2,7 @@ GET http://localhost:4000/ping
 
 ###
 
-GET http://localhost:4000/eventos/evento-fullstack
+GET http://localhost:4000/eventos/semana-formacao-dev
 
 ###
 
@@ -10,7 +10,7 @@ GET http://localhost:4000/eventos/6ced1457-313b-4b33-a35a-f5887f784f08
 
 ###
 
-GET http://localhost:4000/eventos/validar/evento-fullstack/b3d22a90-e486-4c55-ae97-8df99315a062
+GET http://localhost:4000/eventos/validar/semana-formacao-dev/e8e63388-6028-4df5-bcf7-1d37b40c97c8
 
 ###
 
@@ -42,7 +42,6 @@ POST http://localhost:4000/eventos
 Content-Type: application/json
 
 {
-    "id": "6ced1457-313b-4b33-a35a-f5887f784f08",
     "alias": "semana-formacao-dev",
     "nome": "Evento Semana Formação.Dev",
     "data": "2024-12-31T23:00",
@@ -54,7 +53,6 @@ Content-Type: application/json
     "publicoEsperado": 1000,
     "convidados": [
         {
-            "id": "ec028d05-0a3b-476e-88b9-ae891cd52155",
             "nome": "Neto Mendes",
             "email": "jlmendesneto@hotmail.com",
             "confirmado": true,

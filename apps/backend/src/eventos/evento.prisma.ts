@@ -7,7 +7,12 @@ export class EventoPrisma {
   constructor(readonly prisma: PrismaProvider) {}
 
   salvar(evento: Evento) {
-    return this.prisma.evento.create({ data: evento as any });
+    return this.prisma.evento.create({
+      data: {
+        ...evento,
+        convidados: { create: evento.convidados },
+      },
+    });
   }
 
   salvarConvidado(evento: Evento, convidado: Convidado) {
