@@ -1,8 +1,65 @@
 GET http://localhost:4000/ping
 
 ###
+
 GET http://localhost:4000/eventos/evento-fullstack
 
 ###
 
 GET http://localhost:4000/eventos/6ced1457-313b-4b33-a35a-f5887f784f08
+
+###
+
+GET http://localhost:4000/eventos/validar/evento-fullstack/b3d22a90-e486-4c55-ae97-8df99315a062
+
+###
+
+POST http://localhost:4000/eventos/acessar 
+Content-Type: application/json
+
+{
+    "id": "6af6052a-2ae8-46d4-bf12-eaf5ddd97b28",
+    "senha": "familia2024"
+}
+
+###
+
+POST http://localhost:4000/eventos/reuniao-familia-oliveira/convidado 
+Content-Type: application/json
+
+{
+    "id": "ec028d05-0a3b-476e-88b9-ae891cd52155",
+    "nome": "Neto Mendes",
+    "email": "jlmendesneto@hotmail.com",
+    "confirmado": true,
+    "possuiAcompanhantes": true,
+    "qtdeAcompanhantes": 4
+}
+
+###
+
+POST http://localhost:4000/eventos 
+Content-Type: application/json
+
+{
+    "id": "6ced1457-313b-4b33-a35a-f5887f784f08",
+    "alias": "semana-formacao-dev",
+    "nome": "Evento Semana Formação.Dev",
+    "data": "2024-12-31T23:00",
+    "local": "São Paulo",
+    "descricao": "Evento de Tecnologia",
+    "senha": "framework2025",
+    "imagem": "https://www.formacao.dev/assets/img/logo.png",
+    "imagemBackground": "https://www.formacao.dev/assets/img/background.jpg",
+    "publicoEsperado": 1000,
+    "convidados": [
+        {
+            "id": "ec028d05-0a3b-476e-88b9-ae891cd52155",
+            "nome": "Neto Mendes",
+            "email": "jlmendesneto@hotmail.com",
+            "confirmado": true,
+            "possuiAcompanhantes": true,
+            "qtdeAcompanhantes": 4
+        }
+    ]
+}

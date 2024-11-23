@@ -11,8 +11,8 @@ datasource db {
 }
 
 model Evento {
-  id               String   @id @default(uuid())
-  alias            String   @unique
+  id               String      @id @default(uuid())
+  alias            String      @unique
   nome             String
   senha            String
   data             DateTime
@@ -27,14 +27,14 @@ model Evento {
 }
 
 model Convidado {
-    id               String   @id @default(uuid())
-    nome             String
-    email            String
-    confirmado       Boolean
-    possuiAcompanhantes Boolean
-    qtdeAcompanhantes Int
-    Evento           Evento   @relation(fields: [eventoId], references: [id])
-    eventoId         String
+  id                  String  @id @default(uuid())
+  nome                String
+  email               String
+  confirmado          Boolean
+  possuiAcompanhantes Boolean
+  qtdeAcompanhantes   Int
+  evento              Evento?  @relation(fields: [eventoId], references: [id])
+  eventoId            String?
 
-    @@map("convidados")
+  @@map("convidados")
 }
