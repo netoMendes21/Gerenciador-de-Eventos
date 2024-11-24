@@ -10,7 +10,7 @@ GET http://localhost:4000/eventos/6ced1457-313b-4b33-a35a-f5887f784f08
 
 ###
 
-GET http://localhost:4000/eventos/validar/semana-formacao-dev/e8e63388-6028-4df5-bcf7-1d37b40c97c8
+GET http://localhost:4000/eventos/validar/evento-fullstack/b3d22a90-e486-4c55-ae97-8df99315a06240c97c8
 
 ###
 

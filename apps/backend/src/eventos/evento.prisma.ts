@@ -9,7 +9,7 @@ export class EventoPrisma {
   salvar(evento: Evento) {
     return this.prisma.evento.create({
       data: {
-        ...evento,
+        ...(evento as any),
         convidados: { create: evento.convidados },
       },
     });
@@ -25,9 +25,10 @@ export class EventoPrisma {
     });
   }
 
-  buscarTodos(): Evento[] {
+  async buscarTodos(): Promise<Evento[]> {
     return this.prisma.evento.findMany() as any;
   }
+
   async buscarPorId(
     id: string,
     completo: boolean = false,
